@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Weather Icons from FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <div class="weather-info">
+            <div class="location">
+                <label for="location-input">Enter a location:</label>
+                <input type="text" id="location-input" placeholder="City Name" autofocus>
+                <button onclick="getWeatherByLocation()">Get Weather</button>
+            </div>
+            <div class="current-weather">
+                <div id="weather-icon" class="weather-icon">
+                    <i class="fas fa-cloud-sun"></i>
+                </div>
+                <p id="city-name"></p>
+                <p id="temperature"></p>
+                <p id="weather-description"></p>
+                <p id="humidity"></p>
+                <p id="wind-speed"></p>
+            </div>
+        </div>
+        <button class="my-location-btn" onclick="getCurrentLocationWeather()">Get Weather for My Location</button>
+        <div id="loading" class="loading">Loading...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

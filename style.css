@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #c3eeff;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    background-color: #8e91f9;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 380px;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.weather-info {
+    margin-bottom: 30px;
+}
+
+.location {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 12px;
+    font-size: 1em;
+    width: 70%;
+    margin-right: 10px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #8e44ad;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1em;
+    border: none;
+    background-color: #8e44ad;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #5e3370;
+    transform: scale(1.05);
+}
+
+button:focus {
+    outline: none;
+}
+
+.my-location-btn {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 20px;
+    background-color: #128cc9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.my-location-btn:hover {
+    background-color: #0088cc;
+    transform: scale(1.05);
+}
+
+#loading {
+    font-size: 1.2em;
+    color: white;
+    display: none;
+    animation: loadingAnim 1.5s infinite ease-in-out;
+}
+
+@keyframes loadingAnim {
+    0% { opacity: 0.1; }
+    50% { opacity: 1; }
+    100% { opacity: 0.1; }
+}
+
+.current-weather p {
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#weather-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.weather-icon i {
+    transition: transform 0.5s ease;
+}
+
+.weather-icon i.sunny {
+    color: #ffcc00;
+}
+
+.weather-icon i.cloudy {
+    color: #8e44ad;
+}
+
+.weather-icon i.rainy {
+    color: #3498db;
+}
+
+.weather-icon i.snowy {
+    color: #ffffff;
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 300px;
+        padding: 20px;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    button, .my-location-btn {
+        padding: 10px 15px;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
